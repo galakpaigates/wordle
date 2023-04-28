@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    font-family: 'Verdana', sans-serif;
+}
+
+.header {
+    width: auto;
+    box-shadow: 0px 0px 12px #6c6a6a;
+    padding: 12px;
+    background-color: beige;
+    text-align: center;
+}
+
+.wordleH1 {
+    margin-left: -60px;
+}
+
+.screensDiv {
+    margin: auto;
+    width: 400px;
+    margin-top: 10px;
+}
+
+.screenDiv {
+    box-shadow: 0px 0px 4px gray;
+    width: 50px;
+    height: 55px;
+    border-radius: 7px;
+    font-size: 22px;
+    margin: 7px;
+    padding-top: 13.5px;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+}
