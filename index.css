@@ -7,6 +7,10 @@
     font-family: 'Verdana', sans-serif;
 }
 
+body {
+    background-color: #3A3A3C;
+}
+
 .header {
     width: auto;
     box-shadow: 0px 0px 12px #6c6a6a;
@@ -26,7 +30,6 @@
 }
 
 .screenDiv {
-    box-shadow: 0px 0px 4px gray;
     width: 50px;
     height: 55px;
     border-radius: 7px;
@@ -36,4 +39,27 @@
     text-align: center;
     display: inline-block;
     cursor: pointer;
+    background-color: #538D4E;
+    color: white;
+}
+
+.keysDiv {
+    margin: auto;
+    width: 400px;
+    margin-top: 10px;
+}
+
+.key {
+    box-shadow: 0px 0px 1px white;
+    color: white;
+    font-size: 21px;
+    text-transform: uppercase;
+    margin: 7px;
+    border-radius: 4px;
+    padding: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: inline-block;
 }
