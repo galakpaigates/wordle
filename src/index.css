@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    font-family: 'Verdana', sans-serif;
+}
+
+body {
+    background-color: #3A3A3C;
+    text-align: center;
+}
+
+.header {
+    width: auto;
+    box-shadow: 0px 0px 3px #e0d2d2;
+    padding: 12px;
+    background-color: #3A3A3C;
+    text-align: center;
+    color: white;
+}
+
+.screensDiv {
+    margin: auto;
+    max-width: 280px;
+    margin-top: 10px;
+    width: 97vw;
+    padding-bottom: 12px;
+    border-bottom: 2px solid slategray;
+}
+
+.screenDiv {
+    min-width: 40px;
+    min-height: 45px;
+    border-radius: 4px;
+    font-size: 22px;
+    margin: 3px 1px;
+    cursor: pointer;
+    background-color: #3A3A3C;
+    color: white;
+    box-shadow: 0px 0px 1.5px white;
+}
+
+.keysDiv {
+    padding-top: 12px;
+    margin: auto;
+    width: 100vw;
+    max-width: 400px;
+}
+
+.key {
+    border: 2px;
+    color: white;
+    font-size: 15px;
+    background-color: slategray;
+    border-radius: 3px;
+    text-transform: uppercase;
+    padding: 7px 7px 7px 7px;
+    margin: 3px 1px;
+}
+
+.enter {
+    padding: 5px;
+    background-color: #818b97;
+    color: white;
+    font-weight: 700;
+}
+
+.backspace {
+    border-radius: 3px;
+    background-color: slategray;
+    margin-top: 7px;
+}
+
+.backspaceImg {
+    height: 27px;
+    margin-bottom: -8.5px;
+}
