@@ -7,6 +7,51 @@
     font-family: 'Verdana', sans-serif;
 }
 
+.star {
+    height: 80px;
+    width: 120px;
+}
+
+.youWonH1 {
+    color: white;
+    position: absolute;
+    top: 40vh;
+    left: 30vw;
+    right: 30vw;
+    width: 40vw;
+    height: 20vh;
+    display: none;
+    z-index: 9999;
+    border-radius: 12px;
+    animation: shake 1.5s ease-in forwards infinite;
+}
+
+.youLostH1 {
+    color: white;
+    position: absolute;
+    top: 40vh;
+    left: 30vw;
+    right: 30vw;
+    width: 40vw;
+    height: 20vh;
+    display: none;
+    z-index: 9999;
+    border-radius: 12px;
+    animation: shake 1.5s ease-in forwards infinite;
+}
+
+@keyframes shake {
+    50% {transform: translateY(21px);}
+    100% {transform: translateY(-21px);}
+}
+
+.youLostH1 span {
+    font-size: 50px;
+    color: crimson;
+    font-weight: 1000;
+    margin-left: 25px;
+}
+
 body {
     background-color: #3A3A3C;
     text-align: center;
@@ -27,16 +72,16 @@ body {
     margin-top: 10px;
     width: 97vw;
     padding-bottom: 12px;
-    border-bottom: 2px solid slategray;
+    border-bottom: 2px solid #708090;
 }
 
 .screenDiv {
     min-width: 40px;
     min-height: 45px;
     border-radius: 4px;
-    font-size: 22px;
+    font-size: 25px;
+    font-weight: 1000;
     margin: 3px 1px;
-    cursor: pointer;
     background-color: #3A3A3C;
     color: white;
     box-shadow: 0px 0px 1.5px white;
@@ -47,9 +92,10 @@ body {
     margin: auto;
     width: 100vw;
     max-width: 400px;
+    padding-bottom: 12px;
 }
 
-.key {
+.keysDiv button {
     border: 2px;
     color: white;
     font-size: 15px;
@@ -57,23 +103,76 @@ body {
     border-radius: 3px;
     text-transform: uppercase;
     padding: 7px 7px 7px 7px;
-    margin: 3px 1px;
+    margin: 3px 0px;
+    font-weight: 300;
+    cursor: pointer;
 }
 
 .enter {
-    padding: 5px;
-    background-color: #818b97;
-    color: white;
-    font-weight: 700;
+    height: 5.5vh;
+    width: 10vw;
+    min-width: 60px;
+    max-width: 85px;
+    max-height: 33px;
 }
 
 .backspace {
-    border-radius: 3px;
-    background-color: slategray;
-    margin-top: 7px;
+    height: 7.2vh;
+    width: 11vw;
+    min-width: 40px;
+    max-width: 85px;
+    max-height: 33px;
 }
 
 .backspaceImg {
-    height: 27px;
-    margin-bottom: -8.5px;
+    width: 40px;
+    height: 35px;
+    margin-top: -8px;
+    margin-left: -7px;
+    fill: white;
+    margin-bottom: -12px;
+    pointer-events: none;
+}
+
+@media only screen and (min-width: 500px) {
+
+    .screensDiv {
+        max-width: 25vw;
+        min-width: 272px;
+    }
+
+    .screenDiv {
+        width: 4vw;
+        height: 14vh;
+        max-height: 10px;
+    }
+
+    .keysDiv {
+        max-width: none;
+    }
+
+    .key {
+        width: 5vw;
+        height: 7.2vh;
+        max-width: 53;
+        font-size: 18px !important;
+        font-weight: 1000;
+    }
+
+    .enter {
+        height: 7.2vh;
+        min-height: 7.2vh;
+        font-weight: 1000;
+        font-size: 18px;
+    }
+
+    .backspace {
+        min-height: 7.2vh;
+    }
+
+    .star {
+        width: 210px;
+        height: 120px;
+        margin-left: -40px;
+    }
 }
