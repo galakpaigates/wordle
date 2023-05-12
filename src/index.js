@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const youWonH1 = document.querySelector('.youWonH1');
     const youLostH1 = document.querySelector('.youLostH1');
     const container = document.querySelector('.container');
+    const correctWordSpan = document.getElementById('correctWordSpan');
 
     var mode = "add";
 
@@ -118,6 +119,8 @@ document.addEventListener('DOMContentLoaded', () => {
         container.style.pointerEvents = "none";
 
         youLostH1.style.display = "flex"; youLostH1.style.justifyContent = "center"; youLostH1.style.alignItems = "center";
+        
+        correctWordSpan.innerText = `\n${luckyWord}`;
 
         setTimeout(() => {
             location.reload();
@@ -164,6 +167,20 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    function changeUsedKeysColor() {
+
+        const allScreenDivsNodeList = getAllScreenButtonsWithTextAndNotDisabled();
+        const allKeysNodeList = getAllKeys();
+
+        for (let i = 0; i < allKeysNodeList.length; i++) {
+
+            if (allKeysNodeList[i].innerText.toUpperCase() === allScreenDivsNodeList[0] || allKeysNodeList[i].innerText.toUpperCase() === allScreenDivsNodeList[1] || allKeysNodeList[i].innerText.toUpperCase() === allScreenDivsNodeList[2] || allKeysNodeList[i].innerText.toUpperCase() === allScreenDivsNodeList[3] || allKeysNodeList[i].innerText.toUpperCase() === allScreenDivsNodeList[4]) {
+
+                allKeysNodeList[i].style.backgroundColor = "grey";
+            }
+        }
+    }
+
     function insertScreenDivs() {
         for (let i = 1; i < 31; i++) {
 
@@ -178,6 +195,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function getAllScreenButtons() {
         return document.querySelectorAll('.screenDiv');
+    }
+
+    function getAllKeys() {
+
+        return document.querySelectorAll('.key');
     }
 
     function addTextToScreen(clickedElement) {
@@ -248,6 +270,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             checkResult();
 
+            changeUsedKeysColor();
+
             disableAllBtnsWithText();
         }
     })
@@ -267,6 +291,8 @@ document.addEventListener('DOMContentLoaded', () => {
             getAllScreenButtonsWithTextAndNotDisabled();
 
             checkResult();
+
+            changeUsedKeysColor();
 
             disableAllBtnsWithText();
         }

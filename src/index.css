@@ -52,6 +52,18 @@
     margin-left: 25px;
 }
 
+#correctWordSpan {
+    color: #538D4E;
+    font-size: 35px;
+    display: block;
+    position: absolute;
+    top: 50vh;
+    left: 30vw;
+    right: 30vw;
+    font-weight: 1000;
+    animation: shake 1.5s ease-in forwards infinite;
+}
+
 body {
     background-color: #3A3A3C;
     text-align: center;
