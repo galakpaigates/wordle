@@ -40,11 +40,6 @@
     animation: shake 1.5s ease-in forwards infinite;
 }
 
-@keyframes shake {
-    50% {transform: translateY(21px);}
-    100% {transform: translateY(-21px);}
-}
-
 .youLostH1 span {
     font-size: 50px;
     color: crimson;
@@ -62,6 +57,11 @@
     right: 30vw;
     font-weight: 1000;
     animation: shake 1.5s ease-in forwards infinite;
+}
+
+@keyframes shake {
+    50% {transform: translateY(21px);}
+    100% {transform: translateY(-21px);}
 }
 
 body {
