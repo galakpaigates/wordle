@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    document.body.style.overflow = "hidden";
 
     const screensDiv = document.querySelector('.screensDiv');
     const youWonH1 = document.querySelector('.youWonH1');
